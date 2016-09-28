@@ -1,17 +1,15 @@
 import java.io.IOException;
 import java.net.Socket;
-
 /**
  * Created by Michael Kolarik on 9/28/16.
  */
-
 public class FTPClient {
 
     public Socket clientSocket;
 
     public FTPClient() {
         try {
-            clientSocket = new Socket("http://localhost", 5012);
+            clientSocket = new Socket("35.40.124.189", 5012);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -28,4 +26,8 @@ public class FTPClient {
         }
     }
 
+    public static void main(String args[]){
+        FTPClient client = new FTPClient();
+    }
 }
+
