@@ -1,9 +1,9 @@
+import java.io.InputStream;
+import java.net.*;
+
 /**
  * Created by Michael Kolarik on 9/28/16.
  */
-
-import java.io.InputStream;
-import java.net.*;
 
 public class FTPServer {
     private ServerSocket serverSocket;
@@ -15,7 +15,6 @@ public class FTPServer {
     }
 
     private void startServer() {
-        while (true) {
             try {
                 serverSocket = new ServerSocket(this.port);
                 Socket clientSocket = serverSocket.accept();
@@ -25,7 +24,6 @@ public class FTPServer {
             } catch (Exception e) {
                 System.out.println("Something went wrong connecting Client Socket to Server \n");
             }
-        }
     }
 
     private void getFile() {
