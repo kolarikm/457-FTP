@@ -24,6 +24,10 @@ public class FTPClient {
         }
     }
 
+    private void retr(String filename) {
+
+    }
+
     private void menu() {
         while(true) {
             System.out.println("Please choose a command:\n");
@@ -44,10 +48,13 @@ public class FTPClient {
 
             switch(selection[0]) {
                 case "CONNECT": //connect()
+                    //Pass in other parameters
+                    connect(selection[1], Integer.parseInt(selection[2]));
                     break;
                 case "LIST": //list()
                     break;
                 case "RETR": //retr();
+                    retr(selection[1]);
                     break;
                 case "STOR": //stor();
                     break;
